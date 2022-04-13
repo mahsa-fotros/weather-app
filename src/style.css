@@ -1,0 +1,43 @@
+body {
+  font-family: "Fredoka One", cursive;
+
+  background-image: url("../background/5183000.jpg");
+}
+.weather-app {
+  max-width: 700px;
+  border: 1px solid #87ceeb;
+  border-radius: 5px;
+  display: block;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #d9ecee;
+}
+ul {
+  margin: 2px 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  color: #000080;
+  font-size: 19px;
+  font-weight: 100;
+  line-height: 23px;
+}
+h1 {
+  margin-bottom: 0;
+  color: #000080;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 28px;
+}
+img {
+  max-width: 200px;
+}
+small {
+  text-align: center;
+  display: block;
+  margin-top: 300px;
+}
+a {
+  text-decoration: none;
+}
