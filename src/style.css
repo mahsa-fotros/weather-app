@@ -3,8 +3,28 @@ body {
 
   background-image: url("../background/5183000.jpg");
 }
+
+ul {
+  margin: 2px 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  color: #0000ff;
+  font-size: 19px;
+  font-weight: 100;
+  line-height: 23px;
+}
+
+img {
+  max-width: 200px;
+}
+a {
+  text-decoration: none;
+}
+
 .weather-app {
-  max-width: 700px;
+  max-width: 850px;
   border: 1px solid #87ceeb;
   border-radius: 5px;
   display: block;
@@ -12,32 +32,30 @@ body {
   padding: 20px;
   background-color: #d9ecee;
 }
-ul {
-  margin: 2px 0;
-  padding: 0;
-}
-li {
-  list-style: none;
+.weather-parameters {
   color: #000080;
-  font-size: 19px;
-  font-weight: 100;
-  line-height: 23px;
-}
-h1 {
   margin-bottom: 0;
+}
+.weather-parameters strong {
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 1;
+}
+.weather-parameters .units {
+  position: relative;
+  top: -31px;
+}
+.description {
+  text-align: center;
+}
+.description .city {
   color: #000080;
-  font-size: 28px;
-  font-weight: bold;
-  line-height: 28px;
+  font-size: 46px;
+  font-weight: bolder;
+  line-height: 1;
 }
-img {
-  max-width: 200px;
-}
-small {
+.footer {
   text-align: center;
   display: block;
   margin-top: 300px;
-}
-a {
-  text-decoration: none;
 }
