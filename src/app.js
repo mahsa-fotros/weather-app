@@ -38,8 +38,20 @@ function displayTemperature(response) {
   iconElement.setAttribute("src", `icons/${response.data.weather[0].icon}.svg`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
-let apiKey = "8c015c55555e4a56a568e7b57076b8d1";
-let units = "metric";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=tehran&appid=${apiKey}&units=${units}`;
 
-axios.get(apiUrl).then(displayTemperature);
+function search(city) {
+  let apiKey = "8c015c55555e4a56a568e7b57076b8d1";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#city-input");
+  search(cityInput.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
