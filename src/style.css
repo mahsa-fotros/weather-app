@@ -14,19 +14,22 @@ li {
   font-size: 19px;
   font-weight: 100;
   line-height: 23px;
+  text-transform: capitalize;
 }
 
 img {
-  max-width: 200px;
+  max-width: 150px;
+  display: block;
+  margin: 0 auto;
 }
 a {
   text-decoration: none;
 }
 
 .weather-app {
-  max-width: 850px;
+  max-width: 700px;
   border: 1px solid #87ceeb;
-  border-radius: 5px;
+  border-radius: 10px;
   display: block;
   margin: 100px auto;
   padding: 20px;
@@ -45,12 +48,12 @@ a {
   position: relative;
   top: -31px;
 }
-.description {
+#city-time-description {
   text-align: center;
 }
-.description .city {
+#city-time-description #city {
   color: #000080;
-  font-size: 46px;
+  font-size: 41px;
   font-weight: bolder;
   line-height: 1;
 }
