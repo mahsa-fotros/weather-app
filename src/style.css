@@ -21,6 +21,7 @@ li::first-letter {
 a {
   text-decoration: none;
 }
+
 .search-form {
   max-width: 700px;
   border: 1px solid #87ceeb;
@@ -54,8 +55,17 @@ a {
 }
 .weather-parameters .units {
   position: relative;
-  top: -31px;
+  top: -36px;
 }
+.weather-parameters .active {
+  color: #000080;
+  cursor: default;
+  text-decoration: none;
+}
+.weather-parameters .active:hover {
+  cursor: default;
+}
+
 .footer {
   display: block;
   text-align: center;
