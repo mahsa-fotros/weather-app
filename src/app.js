@@ -21,6 +21,31 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHtml = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      ` 
+          <div class="col-2" id="weather-forecast-columns">
+            <div class="weather-forecast-date">${day}</div>
+            <img src="icons/01d.svg" alt="" width="100px" />
+            <div class="weather-forecast-temperatures">
+              <span class="weather-forecast-temperature-max">18º</span>
+              <span class="weather-forecast-temperature-min">12º</span>
+            </div>
+          </div>
+        `;
+  });
+
+  forecastHtml = forecastHtml + `</div>`;
+
+  forecastElement.innerHTML = forecastHtml;
+}
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -84,3 +109,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("tehran");
+displayForecast();

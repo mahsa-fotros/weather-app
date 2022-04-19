@@ -28,7 +28,7 @@ a {
   border-radius: 10px;
   border-style: outset;
   display: block;
-  margin: 100px auto 20px;
+  margin: 70px auto 20px;
   padding: 20px;
   background-color: #d9ecee;
 }
@@ -74,7 +74,10 @@ a {
   padding-bottom: 0;
 }
 .weather-forecast {
+  margin: auto;
   margin-top: 20px;
+  margin-bottom: 15px;
+  width: 700px;
   font-weight: bold;
   text-align: center;
 }
@@ -109,7 +112,7 @@ a {
   border-radius: 10px;
   border-style: outset;
   display: block;
-  margin: 0 auto 40px;
+  margin: 0 auto;
   padding: 20px;
   background-color: #d9ecee;
 }
