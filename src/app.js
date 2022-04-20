@@ -112,8 +112,10 @@ function displayFahrenheitTemp(event) {
   fahrenheitLink.classList.add("active");
   celsiusLink.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
+  let degreeSymbolElement = document.querySelector(".degree-symbol");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  degreeSymbolElement.innerHTML = "ºF";
 }
 
 function displayCelsiusTemperature(event) {
@@ -135,4 +137,4 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-search("tehran");
+search("isfahan");

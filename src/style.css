@@ -53,10 +53,18 @@ a {
   font-weight: 400;
   line-height: 1;
 }
-.weather-parameters .units {
+.weather-parameters .degree-symbol {
+  font-size: 15px;
   position: relative;
   top: -36px;
 }
+
+.weather-parameters .units {
+  font-size: 15px;
+  position: relative;
+  top: -36px;
+}
+
 .weather-parameters .active {
   color: #000080;
   cursor: default;
@@ -65,7 +73,6 @@ a {
 .weather-parameters .active:hover {
   cursor: default;
 }
-
 .footer {
   display: block;
   text-align: center;
