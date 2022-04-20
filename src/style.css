@@ -28,7 +28,7 @@ a {
   border-radius: 10px;
   border-style: outset;
   display: block;
-  margin: 70px auto 20px;
+  margin: 60px auto 20px;
   padding: 20px;
   background-color: #d9ecee;
 }
@@ -99,6 +99,12 @@ a {
 #search-button {
   font-size: 15px;
   font-weight: bold;
+}
+#current-location {
+  background-color: #d9ecee;
+  border: none;
+  display: block;
+  margin: 0 auto;
 }
 #city-time-description {
   text-align: center;

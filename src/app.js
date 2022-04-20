@@ -122,8 +122,22 @@ function displayCelsiusTemperature(event) {
   event.preventDefault();
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
+  let degreeSymbolElement = document.querySelector(".degree-symbol");
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  degreeSymbolElement.innerHTML = "ºC";
+}
+
+function showPosition(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiKey = "8c015c55555e4a56a568e7b57076b8d1";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function showCurrentTemperature() {
+  navigator.geolocation.getCurrentPosition(showPosition);
 }
 
 let celsiusTemperature = null;
@@ -136,5 +150,8 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+let currentLocationbutton = document.querySelector("#current-location");
+currentLocationbutton.addEventListener("click", showCurrentTemperature);
 
 search("isfahan");
