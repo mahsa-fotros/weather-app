@@ -79,6 +79,7 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
+  let degreeSymbolElement = document.querySelector(".degree-symbol");
 
   celsiusTemperature = response.data.main.temp;
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
@@ -87,8 +88,11 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  degreeSymbolElement.innerHTML = "ºC";
   iconElement.setAttribute("src", `icons/${response.data.weather[0].icon}.svg`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
 
   getForecast(response.data.coord);
 }
